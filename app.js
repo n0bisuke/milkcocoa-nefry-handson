@@ -18,3 +18,21 @@ function addClass(color){
 let $light = document.querySelector('#light');
 let $bulb = document.querySelector('.bulb');
 $light.addEventListener("click", toggelClass, false);
+
+/**
+ * step2で以下を追加
+ */
+//Milkcocoaのドット絵 https://mlkcca.com/sample.html との接続
+const milkcocoa = new MilkCocoa(`dogi9jz8c16.mlkcca.com`);
+const dot_ds = milkcocoa.dataStore('dots');
+
+let flag = 0;
+dot_ds.on('push',(pushed) => {
+    addClass(pushed.value.color);
+    flag = 1;
+});
+
+setInterval(()=>{
+    removeClass();
+    flag = 0;
+},5000);
