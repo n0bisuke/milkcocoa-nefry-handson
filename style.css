@@ -1,0 +1,69 @@
+.bulb {
+  display: block;
+  color: black;
+  margin: 0 auto;
+  width: 50vh;
+  height: 60vh;
+  background: #bbb;
+  border-radius: 40% 40% 2px 2px;
+}
+.bulb .eyes {
+  width: 100%;
+}
+.bulb .eyes * {
+  margin: 5vh;
+  margin-top: 10vh;
+  display: inline-block;
+  width: 5vh;
+  height: 5vh;
+  background-color: #657883;
+  border-radius: 50%;
+}
+.bulb .mouth {
+  margin: 0 auto;
+  margin-top: 4px;
+  width: 20vh;
+  height: 10vh;
+  background: #657883;
+  border: none;
+  border-radius: 30vh 30vh 10vh 10vh;
+  -moz-transition: all .51s;
+  -o-transition: all .51s;
+  -webkit-transition: all .51s;
+  transition: all .51s;
+}
+
+.bulb.light_up {
+  box-shadow: 0 -10px 100px #ff0000;
+  background: #ff0000;
+}
+.bulb.light_up .mouth {
+  background: #657883;
+  border: none;
+  border-radius: 10vh 10vh 30vh 30vh;
+}
+
+#light {
+  cursor: pointer;
+  margin: 0 auto;
+  margin-top: 20px;
+  padding: 20px;
+  width: 20%;
+  border: 2px #50e2c2 solid;
+  color: #50e2c2;
+  letter-spacing: 3px;
+}
+#light:hover {
+  background: #50e2c2;
+  color: white;
+}
+
+h1, p {
+  color: #50e2c2;
+  text-align: center;
+}
+
+body {
+  text-align: center;
+  background: #23263a;
+}
