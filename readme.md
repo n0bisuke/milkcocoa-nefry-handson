@@ -23,8 +23,16 @@ python -m SimpleHTTPServer
 
 http://localhost:8000 にブラウザでアクセスすると以下のような状態になると思います。
 
-## step1
+## step1の結果
 
 Web上のボタンを押すとLEDがチカチカします。
 
 ![](https://i.gyazo.com/a6e3fb25988251e50dae92f52a3409fb.gif)
+
+## step2へ
+
+問題なくいけたら次はstep2へ
+
+```
+git checkout step2
+```
