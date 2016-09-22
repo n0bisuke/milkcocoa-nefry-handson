@@ -55,7 +55,7 @@ http://localhost:8000 にブラウザでアクセスして動作を確認しま�
 
 ![](https://i.gyazo.com/be69a5352b9e073ef7b75ee99bbf7bb9.gif)
 
-### step2へ
+### step3へ
 
 問題なくいけたら次はstep3へ
 
