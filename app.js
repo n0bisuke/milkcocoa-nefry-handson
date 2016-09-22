@@ -18,8 +18,3 @@ function addClass(color){
 let $light = document.querySelector('#light');
 let $bulb = document.querySelector('.bulb');
 $light.addEventListener("click", toggelClass, false);
-
-setInterval(()=>{
-    removeClass();
-    flag = 0;
-},5000);

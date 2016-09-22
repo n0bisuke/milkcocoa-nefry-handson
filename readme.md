@@ -3,7 +3,7 @@
 ## 準備
 
 ```
-git clone git@github.com:n0bisuke/milkcocoa-nefry-handson.git
+git clone https://github.com/n0bisuke/milkcocoa-nefry-handson.git
 cd milkcocoa-nefry-handson
 ```
 
