@@ -42,13 +42,16 @@ git checkout step2
 
 ### step2ではMilkcocoaのドット絵とつなぎます。
 
-リアルタイムに複数人で共同おえかきができる[ドット絵](https://mlkcca.com/sample.html)。
+リアルタイムに複数人で共同おえかきができる[ドット絵](https://mlkcca.com/sample.html)
 
-### もと記事をもとに進めて見ましょう。
+### 記事をもとに進めて見ましょう。
 
 https://dotstud.io/blog/milkcocoa-nefry-handson-vol1
 
 ### step2の結果
+
+http://localhost:8000 にブラウザでアクセスして動作を確認しましょう。
+同時に https://mlkcca.com/sample.html も開いてドット絵で色を塗るとLEDの色が変わることを確認してください。
 
 ![](https://i.gyazo.com/be69a5352b9e073ef7b75ee99bbf7bb9.gif)
 
