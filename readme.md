@@ -46,7 +46,7 @@ git checkout step2
 
 ### 記事をもとに進めて見ましょう。
 
-https://dotstud.io/blog/milkcocoa-nefry-handson-vol1
+https://dotstud.io/blog/milkcocoa-nefry-iot-handson
 
 ### step2の結果
 
@@ -61,4 +61,24 @@ http://localhost:8000 にブラウザでアクセスして動作を確認しま�
 
 ```
 git checkout step3
+```
+
+## step3
+
+### 記事をもとに進めて見ましょう。
+
+Nefryにプログラムを書き込む設定をしましょう。
+
+https://dotstud.io/blog/milkcocoa-nefry-iot-handson
+
+### step3の結果
+
+NefryがカラーLチカできます。
+
+### step4へ
+
+問題なくいけたら次はstep4へ
+
+```
+git checkout step4
 ```
