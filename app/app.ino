@@ -1,18 +1,34 @@
 #include <Nefry.h>
-//フルカラーLED　ランダムにカラーが変わります。
+#include <Nefry_Milkcocoa.h>
+
+Nefry_Milkcocoa *milkcocoa;
+ 
+char *datastore;
+int red,green,blue;
+void onsend(DataElement *elem) {//MilkcocoaのOn関数と同一
+  //データストアにデータが届いたときに呼び出される
+    red = elem->getInt("r");
+    green = elem->getInt("g");
+    blue = elem->getInt("b");    
+    Nefry.setLed(red,green,blue);//LEDがランダムに点灯します。
+    String color="Red:";color+=red;
+    color+=" Green:";color+=green;
+    color+=" Blue:";color+=blue;
+    Nefry.println(color);//Nefry consoleで色を表示
+    Nefry.print("onpush:");
+    Nefry.println(elem->getInt("sw"));//swというデータがあるとき表示されます
+}
+ 
 void setup() {
-  Nefry.println("フルカラーLED!");
+  milkcocoa->print();//Setup ModuleページにAPPIDの表示をする
+  milkcocoa = Nefry_Milkcocoa::begin();//milkcocoaと接続に必要になる処理をします。
+  datastore = Nefry.getConfStr(3);//Setup Moduleページに入力されたデータストア名を保存します。
+  Nefry.println( milkcocoa->on( datastore, "send", onsend) ? "Milkcocoa onPush OK" : "Milkcocoa onPush NG" );//on関数を有効にします。
   randomSeed(analogRead(A0));
 }
-int red,green,blue;
+
 void loop() {
-  red=random(255);//random関数は0-255の数値をランダムに返します。
-  green=random(255);
-  blue=random(255);
-  Nefry.setLed(red,green,blue);//LEDがランダムに点灯します。
-  String color="Red:";color+=red;
-  color+=" Green:";color+=green;
-  color+=" Blue:";color+=blue;
-  Nefry.println(color);//Nefry consoleで色を表示
-  Nefry.ndelay(1000);//1秒待つ
+  Nefry.println( milkcocoa->loop(10000)? "Milkcocoa Connect OK" : "Milkcocoa Connect NG" );//10秒以内にMilkcocoaに接続できればokと表示されます。
+  DataElement elem = DataElement();
+  milkcocoa->send(datastore, &elem);//Milkcocoaに送信
 }
