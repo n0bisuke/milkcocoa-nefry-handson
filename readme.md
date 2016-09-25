@@ -82,3 +82,9 @@ NefryがカラーLチカできます。
 ```
 git checkout step4
 ```
+
+## step4
+
+記事をもとに
+
+[こちら](https://www.instagram.com/p/BKyHEcljEZS/)の完成品を目指しましょう。
